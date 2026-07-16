@@ -394,6 +394,27 @@
   @media (prefers-reduced-motion: reduce){
     *{ transition:none !important; animation:none !important; scroll-behavior:auto !important;}
   }
+
+/* ===== Instagram Reels ===== */
+.reels-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:28px;
+}
+.reels-grid iframe{
+width:100%;
+aspect-ratio:9/16;
+min-height:640px;
+border:none;
+border-radius:12px;
+background:#fff;
+box-shadow:0 12px 30px rgba(0,0,0,.08);
+}
+@media(max-width:768px){
+.reels-grid{grid-template-columns:1fr;}
+.reels-grid iframe{min-height:560px;}
+}
+
 </style>
 </head>
 <body>
@@ -510,6 +531,47 @@
       </div>
     </div>
   </div>
+</section>
+
+
+<section id="reels">
+<div class="wrap">
+<div class="section-head">
+<div class="eyebrow">See Nawa in Motion</div>
+<h2>Latest Instagram Reels</h2>
+</div>
+<div class="reels-grid">
+<iframe src="https://www.instagram.com/reel/Da0aGlWtFFQ/embed" loading="lazy" allowfullscreen></iframe>
+<iframe src="https://www.instagram.com/reel/Daxq5ykv7E8/embed" loading="lazy" allowfullscreen></iframe>
+<iframe src="https://www.instagram.com/reel/DavGib_uPtj/embed" loading="lazy" allowfullscreen></iframe>
+<iframe src="https://www.instagram.com/reel/Dasq_GQil3b/embed" loading="lazy" allowfullscreen></iframe>
+<iframe src="https://www.instagram.com/reel/DaqBwg-MMHn/embed" loading="lazy" allowfullscreen></iframe>
+<iframe src="https://www.instagram.com/reel/Dak8t7-hgxs/embed" loading="lazy" allowfullscreen></iframe>
+<iframe src="https://www.instagram.com/reel/DainrhXSiOm/embed" loading="lazy" allowfullscreen></iframe>
+<iframe src="https://www.instagram.com/reel/DWytjrXCfX3/embed" loading="lazy" allowfullscreen></iframe>
+<iframe src="https://www.instagram.com/reel/DXJ25DFkY95/embed" loading="lazy" allowfullscreen></iframe>
+<iframe src="https://www.instagram.com/reel/DXMbvnDkZ-X/embed" loading="lazy" allowfullscreen></iframe>
+<iframe src="https://www.instagram.com/reel/DXO_7cLkk-y/embed" loading="lazy" allowfullscreen></iframe>
+<iframe src="https://www.instagram.com/reel/DXYboZiEd9Q/embed" loading="lazy" allowfullscreen></iframe>
+<iframe src="https://www.instagram.com/reel/DXbAkoEEZGl/embed" loading="lazy" allowfullscreen></iframe>
+<iframe src="https://www.instagram.com/reel/DXg930AkVh_/embed" loading="lazy" allowfullscreen></iframe>
+<iframe src="https://www.instagram.com/reel/DXjkaDrDHQM/embed" loading="lazy" allowfullscreen></iframe>
+<iframe src="https://www.instagram.com/reel/DXmJ9J3kRDT/embed" loading="lazy" allowfullscreen></iframe>
+<iframe src="https://www.instagram.com/reel/DXos8PhEbMn/embed" loading="lazy" allowfullscreen></iframe>
+<iframe src="https://www.instagram.com/reel/DXt6zFJkgOg/embed" loading="lazy" allowfullscreen></iframe>
+<iframe src="https://www.instagram.com/reel/DX6ygigxASg/embed" loading="lazy" allowfullscreen></iframe>
+<iframe src="https://www.instagram.com/reel/DX4Opl2S4YV/embed" loading="lazy" allowfullscreen></iframe>
+<iframe src="https://www.instagram.com/reel/DX1obbOSQ4J/embed" loading="lazy" allowfullscreen></iframe>
+<iframe src="https://www.instagram.com/reel/DX9XjPUxU_M/embed" loading="lazy" allowfullscreen></iframe>
+<iframe src="https://www.instagram.com/reel/DYABKtYxUcu/embed" loading="lazy" allowfullscreen></iframe>
+<iframe src="https://www.instagram.com/reel/DYUkurdxVxx/embed" loading="lazy" allowfullscreen></iframe>
+<iframe src="https://www.instagram.com/reel/DZPrT1MSn8_/embed" loading="lazy" allowfullscreen></iframe>
+<iframe src="https://www.instagram.com/reel/DZUp7LZvU3q/embed" loading="lazy" allowfullscreen></iframe>
+</div>
+<div style="text-align:center;margin-top:40px">
+<a class="btn btn-solid" href="https://www.instagram.com/nawaofficials" target="_blank">View More on Instagram</a>
+</div>
+</div>
 </section>
 
 <section class="founder-section" id="founder">
@@ -732,5 +794,20 @@
   });
 </script>
 
+
+<script async src="https://www.instagram.com/embed.js"></script>
+<script>
+document.querySelector('.nav-toggle')?.addEventListener('click',()=>{
+ const nav=document.querySelector('nav');
+ nav.style.display=nav.style.display==='flex'?'none':'flex';
+ nav.style.flexDirection='column';
+ nav.style.position='absolute';
+ nav.style.top='70px';
+ nav.style.right='20px';
+ nav.style.background='#F6F1E6';
+ nav.style.padding='20px';
+ nav.style.border='1px solid rgba(0,0,0,.1)';
+});
+</script>
 </body>
 </html>
